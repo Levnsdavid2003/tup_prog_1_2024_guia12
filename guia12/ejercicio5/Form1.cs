@@ -41,5 +41,31 @@ namespace ejercicio5
                 tbLista.Text = "No se ingresaron valores.";
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            bool burbuja = rbBurbuja.Checked;
+            bool biseccional = rbBiseccional.Checked;
+
+            if (burbuja)
+            {
+
+            }
+
+
+            tbLista.Text = "Listado:\r\n";
+            for (int i = 0; i < contador; i++)
+            {
+                tbLista.Text += $"{valores[i]}\r\n";
+            }
+        }
     }
 }

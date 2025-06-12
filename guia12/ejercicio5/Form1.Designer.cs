@@ -65,6 +65,7 @@
             btnBuscar.TabIndex = 1;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnMostrar
             // 
@@ -75,6 +76,7 @@
             btnMostrar.TabIndex = 2;
             btnMostrar.Text = "Mostrar Listado";
             btnMostrar.UseVisualStyleBackColor = true;
+            btnMostrar.Click += btnMostrar_Click;
             // 
             // groupBox1
             // 
