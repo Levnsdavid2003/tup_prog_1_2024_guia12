@@ -1,4 +1,4 @@
-namespace ejercicio3
+namespace ejercicio4
 {
     public partial class Form1 : Form
     {
@@ -11,8 +11,8 @@ namespace ejercicio3
         {
             lsbListado.Items.Clear();
 
+            int[] elementos = new int[10];
             int contador = 0;
-            int elementos = 0;
 
             FormModal form = new FormModal();
 
@@ -20,9 +20,7 @@ namespace ejercicio3
             {
                 if (form.tbValor.Text != string.Empty)
                 {
-                    lsbListado.Items.Add(form.tbValor.Text);
-                    elementos++;
-                    lbCantidad.Text = $"{elementos}";
+                    elementos[contador] = Convert.ToInt32(form.tbValor.Text);
                     contador++;
                 }
                 else
@@ -31,6 +29,14 @@ namespace ejercicio3
                 }
                 form.tbValor.Text = string.Empty;
             }
+
+            for (int i = 0; i < contador; i++)
+            {
+                lsbListado.Items.Add(elementos[i]);
+            }
+
+            lbCantidad.Text = $"{contador}";
+
         }
     }
 }
