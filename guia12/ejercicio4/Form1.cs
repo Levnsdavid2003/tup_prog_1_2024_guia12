@@ -27,7 +27,7 @@ namespace ejercicio4
                 {
                     break;
                 }
-                form.tbValor.Text = string.Empty;
+                form.tbValor.Clear();
             }
 
             for (int i = 0; i < contador; i++)
