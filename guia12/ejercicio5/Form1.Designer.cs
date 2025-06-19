@@ -194,6 +194,7 @@
             Controls.Add(btnMostrar);
             Controls.Add(btnRegistrar);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Generar número";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

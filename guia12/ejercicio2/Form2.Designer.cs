@@ -43,6 +43,7 @@
             btnAceptar.TabIndex = 5;
             btnAceptar.Text = "Cerrar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // label1
             // 

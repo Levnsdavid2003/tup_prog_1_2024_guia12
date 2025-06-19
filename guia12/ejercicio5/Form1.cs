@@ -56,9 +56,9 @@ namespace ejercicio5
         private void OrdenamientoBurbuja(int[] datos)
         {
             int i, j;
-            for (i = 0; i < datos.Length - 1; i++)
+            for (i = 0; i < contador-1; i++)
             {
-                for (j = i + 1; j < datos.Length - 1; j++)
+                for (j = i + 1; j < contador; j++)
                 {
                     if (datos[i] > datos[j])
                     {
@@ -86,6 +86,7 @@ namespace ejercicio5
                 j--;
 
             } while (i <= j);
+
 
             if (inicio < j) OrdenamientoQuickSort(datos, inicio, j);
             if (fin > i) OrdenamientoQuickSort(datos, i, fin);
@@ -131,6 +132,9 @@ namespace ejercicio5
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             int busqueda = Convert.ToInt32(tbValor.Text);
+
+            /*
+            
             bool secuencial = rbSecuencial.Checked;
             bool biseccional = rbBiseccional.Checked;
             int indice = -1;
@@ -141,18 +145,51 @@ namespace ejercicio5
             {
                 tbLista.Text = "Elija una opción de Tipo de Busqueda";
             }
+            */
 
-            if (secuencial ||  biseccional)
+            int tipo = 0;
+            if (rbSecuencial.Checked) tipo = 1;
+            else if (rbBiseccional.Checked) tipo = 2;
+            else
             {
-                if (indice != -1)
-                {
-                    tbLista.Text = $"El valor '{valores[indice]}' se encontró en índice {indice}";
-                }
-                else
-                {
-                    tbLista.Text = "No se encontró el valor en la lista o la lista no está ordenada.";
-                }
+                MessageBox.Show("seleccione una opción");
+                return;
             }
+
+            int indice = 0;
+            if (tipo == 1)
+            {
+                indice = BusquedaSecuencial(valores, busqueda);
+            }
+            else if (tipo == 2)
+            {
+                indice = BusquedaBiseccional(valores, busqueda);
+            }
+
+
+
+            //if (secuencial ||  biseccional)
+            //{
+            //    if (indice != -1)
+            //    {
+            //        tbLista.Text = $"El valor '{valores[indice]}' se encontró en índice {indice}";
+            //    }
+            //    else
+            //    {
+            //        tbLista.Text = "No se encontró el valor en la lista o la lista no está ordenada.";
+            //    }
+            //}
+
+           
+            if (indice != -1)
+            {
+                tbLista.Text = $"El valor '{valores[indice]}' se encontró en índice {indice}";
+            }
+            else
+            {
+                tbLista.Text = "No se encontró el valor en la lista o la lista no está ordenada.";
+            }
+           
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)

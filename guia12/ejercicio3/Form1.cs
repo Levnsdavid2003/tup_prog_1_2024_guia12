@@ -16,7 +16,7 @@ namespace ejercicio3
 
             FormModal form = new FormModal();
 
-            while (contador < 10 && form.ShowDialog() != DialogResult.Cancel)
+            while (contador < 10 && form.ShowDialog() == DialogResult.OK)
             {
                 if (form.tbValor.Text != string.Empty)
                 {

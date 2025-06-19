@@ -86,6 +86,7 @@
             Controls.Add(tbValor);
             Controls.Add(label1);
             Name = "FormModal";
+            StartPosition = FormStartPosition.CenterParent;
             ResumeLayout(false);
             PerformLayout();
         }
