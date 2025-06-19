@@ -89,7 +89,7 @@
             groupBox1.Size = new Size(321, 125);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Tipo de Ordenamiento";
+            groupBox1.Text = "Tipo de Busqueda";
             // 
             // tbValor
             // 
@@ -107,7 +107,6 @@
             rbBiseccional.Name = "rbBiseccional";
             rbBiseccional.Size = new Size(92, 23);
             rbBiseccional.TabIndex = 5;
-            rbBiseccional.TabStop = true;
             rbBiseccional.Text = "Biseccional";
             rbBiseccional.UseVisualStyleBackColor = true;
             // 
@@ -119,7 +118,6 @@
             rbSecuencial.Name = "rbSecuencial";
             rbSecuencial.Size = new Size(89, 23);
             rbSecuencial.TabIndex = 4;
-            rbSecuencial.TabStop = true;
             rbSecuencial.Text = "Secuencial";
             rbSecuencial.UseVisualStyleBackColor = true;
             // 
@@ -131,7 +129,6 @@
             rbBurbuja.Name = "rbBurbuja";
             rbBurbuja.Size = new Size(74, 23);
             rbBurbuja.TabIndex = 6;
-            rbBurbuja.TabStop = true;
             rbBurbuja.Text = "Burbuja";
             rbBurbuja.UseVisualStyleBackColor = true;
             // 
@@ -143,7 +140,6 @@
             rbQuicksort.Name = "rbQuicksort";
             rbQuicksort.Size = new Size(86, 23);
             rbQuicksort.TabIndex = 7;
-            rbQuicksort.TabStop = true;
             rbQuicksort.Text = "Quicksort";
             rbQuicksort.UseVisualStyleBackColor = true;
             // 
